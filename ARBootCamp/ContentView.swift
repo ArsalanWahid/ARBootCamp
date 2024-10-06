@@ -11,12 +11,13 @@ import RealityKit
 struct ContentView : View {
     
     @State private var isControlVisible: Bool = true
-    
+    @State private var showBrowse: Bool = false
+
     var body: some View {
         ZStack(alignment: .bottom) {
             ARViewController()
             
-            ControlView(isControlVisible: $isControlVisible)
+            ControlView(isControlVisible: $isControlVisible, showBrowse: $showBrowse)
         }.edgesIgnoringSafeArea(.all)
         
        
